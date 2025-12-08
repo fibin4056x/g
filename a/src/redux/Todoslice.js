@@ -72,11 +72,11 @@ const Todoslice=createSlice({
       .addCase(addTodoAPI.pending, (state) => {
         state.loading = true
       })
-      .addCase(addTodoAPI.fulfilled, (state, action) => {
+      .addCase(addTodoAPI.fulfilled, (state,action) => {
         state.loading = false
         state.item.push(action.payload)
       })
-      .addCase(addTodoAPI.rejected, (state, action) => {
+      .addCase(addTodoAPI.rejected, (state,action) => {
         state.loading = false
         state.error = action.error.message
       })
